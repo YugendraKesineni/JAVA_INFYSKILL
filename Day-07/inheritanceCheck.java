@@ -1,15 +1,18 @@
 class Employee{
 
     // Instance Variables or Fields
-    int age;
+    static int age = 10;
     String name;
     int Joining_year;
     float salary;
 
     // Constructor
+
+    // Default Constructor
     Employee(){
         System.out.println("This is a default Constructor");
     }
+
     Employee(int age, String name, int Joining_year, float salary){
         this.age = age;
         this.name = name;
@@ -21,6 +24,19 @@ class Employee{
 
     
     // Methods
+
+    // Getter Methods
+    public static int getAge(){
+        return age;
+    }
+
+    //Setter Methods
+    
+
+
+
+
+
     // Method Overriding
     float bonus(){
         return this.salary + 10000;
@@ -39,6 +55,8 @@ class Employee{
 }
 
 class Manager extends Employee{
+
+    // Instance VARIABLE
     int promotion_year;
 
     // Constructors
@@ -78,6 +96,9 @@ public class inheritanceCheck{
         yugi.information("Yugendra", 23);
         iyengar.information("Iyengar", 50);
 
+        System.out.println("Employee AGe is : " + yugi.getAge());
+
+        
     }
 }
 
