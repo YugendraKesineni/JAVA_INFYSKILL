@@ -73,4 +73,9 @@ public class BankAccount {
         return this.customer.name + " " +this.customer.address +" "+ this.customer.age;
     }
 
+    public double getInterestPayment(double amount, double rate_of_interest, int time_in_years){
+        double interest = (amount * rate_of_interest * time_in_years)/100;
+        return interest;
+    }
+
 }
